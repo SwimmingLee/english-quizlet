@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Pattern Mastery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="glass-header">
+            <div class="header-content">
+                <h1 style="cursor: pointer;" id="logo-title">📚 Pattern Mastery</h1>
+                <nav>
+                    <button id="nav-groups" class="nav-btn active">My Groups</button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- This will be dynamically populated by JS -->
+        </main>
+    </div>
+
+    <!-- Add Group Modal -->
+    <div id="add-group-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <h2>Create New Group</h2>
+            <form id="add-group-form">
+                <div class="form-group">
+                    <label>Group Name</label>
+                    <input type="text" id="input-group-name" placeholder="e.g. Travel English, Business Patterns" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" id="btn-cancel-add-group" class="btn-secondary">Cancel</button>
+                    <button type="submit" class="btn-primary">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Pattern Modal -->
+    <div id="add-pattern-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <h2>Add New Pattern</h2>
+            <form id="add-pattern-form">
+                <div class="form-group">
+                    <label>English Pattern</label>
+                    <input type="text" id="input-pattern" placeholder="e.g. crowd pleaser" required>
+                </div>
+                <div class="form-group">
+                    <label>English Meaning</label>
+                    <input type="text" id="input-meaning-en" placeholder="e.g. something that many people like" required>
+                </div>
+                <div class="form-group">
+                    <label>Korean Meaning</label>
+                    <input type="text" id="input-meaning-kr" placeholder="e.g. 대중적으로 인기가 많은 것" required>
+                </div>
+                
+                <h3>Example Sentence</h3>
+                <div class="form-group">
+                    <label>English Sentence</label>
+                    <textarea id="input-example-en" placeholder="This banana pudding is so delicious. It's such a crowd pleaser." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Korean Translation</label>
+                    <textarea id="input-example-kr" placeholder="이 바나나 푸딩 진짜 맛있다. 완전 사람들이 다 좋아할 맛이야." required></textarea>
+                </div>
+                
+                <div class="modal-actions">
+                    <button type="button" id="btn-cancel-add-pattern" class="btn-secondary">Cancel</button>
+                    <button type="submit" class="btn-primary">Save Pattern</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
